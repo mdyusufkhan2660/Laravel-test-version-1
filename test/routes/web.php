@@ -12,12 +12,7 @@
 */
 
 Route::get('/', function () {
-	$tasks = [
-		'1',
-		'2',
-		'3'
-
-	];
+	$tasks = DB::table('tasks')->get();
 
     return view('welcome', compact('tasks'));
 });
